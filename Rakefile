@@ -5,8 +5,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "ticketmaster-lighthouse"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Ticketmaster Provider for Lighthouse}
+    gem.description = %Q{Allows ticketmaster to interact with Lighthouse's issue tracking system.}
     gem.email = "hong.quach@abigfisch.com"
     gem.homepage = "http://github.com/kiafaldorius/ticketmaster-lighthouse"
     gem.authors = ["Hong"]
