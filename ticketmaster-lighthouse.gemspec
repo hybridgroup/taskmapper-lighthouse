@@ -32,7 +32,8 @@ Gem::Specification.new do |s|
      "lib/ticketmaster-lighthouse.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb",
-     "spec/ticketmaster-lighthouse_spec.rb"
+     "spec/ticketmaster-lighthouse_spec.rb",
+     "ticketmaster-lighthouse.gemspec"
   ]
   s.homepage = %q{http://github.com/kiafaldorius/ticketmaster-lighthouse}
   s.rdoc_options = ["--charset=UTF-8"]
