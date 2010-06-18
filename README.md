@@ -15,7 +15,13 @@ Tokens allow access to a specific project or account without having to give out 
 
 == Finding Projects
 
-    project = lighthouse.project
+    project = lighthouse.project['project_name']
+    project = lighthouse.project.find(:id => 505)
+
+== Finding Tickets
+
+    tickets = project.tickets
+    
 
 ## Requirements
 
