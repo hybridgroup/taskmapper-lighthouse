@@ -11,6 +11,7 @@ begin
     gem.homepage = "http://github.com/kiafaldorius/ticketmaster-lighthouse"
     gem.authors = ["Hong"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.add_dependency "ticketmaster", ">= 0.1.0"
     gem.add_dependency "activesupport", ">= 2.3.2"
     gem.add_dependency "activeresource", ">= 2.3.2"
     gem.add_dependency "addressable", ">= 2.1.2"

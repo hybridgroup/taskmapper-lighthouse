@@ -2,8 +2,6 @@ module TicketMaster::Provider
   module Lighthouse
     # Ticket class for ticketmaster-lighthouse
     class Ticket < TicketMaster::Provider::Base::Ticket
-      # This is an exhaustive list, but should contain the most common ones, add as necessary
-      @@allowed_attributes = ["number", "permalink", "milestone_id", "created_at", "title", "closed", "updated_at", "raw_data", "priority", "tag", "url", "attachments_count", "creator_id", "milestone_due_on", "original_body_html", "user_id", "user_name", "original_body", "latest_body", "assigned_user_id", "creator_name", "state"]
       @@allowed_states = ['new', 'open', 'resolved', 'hold', 'invalid']
       attr_accessor :prefix_options
       
@@ -38,6 +36,9 @@ module TicketMaster::Provider
         end
       end
       
+      def id
+        @system_data[:client].number
+      end
       
       def self.qize(params)
         return params unless params[:q] and params[:q].is_a?(Hash)
@@ -53,11 +54,10 @@ module TicketMaster::Provider
       
       # The find helper
       def self.search(options, limit = 1000)
-        tickets = LighthouseAPI::Ticket.find(:all, :params => qize(options))
-        options.delete(:project_id) || options.delete('project_id')
+        tickets = LighthouseAPI::Ticket.find(:all, :params => ({:project_id => (options.delete(:project_id) || options.delete('project_id')).to_i}.merge(qize(:q => options))))
         tickets.find_all do |t|
           options.keys.reduce(true) do |memo, key|
-            p.send(key) == options[key] and (limit-=1) > 0
+            t.send(key) == options[key] and (limit-=1) > 0
           end
         end
       end
@@ -78,23 +78,25 @@ module TicketMaster::Provider
       
       # The creator
       def self.create(*options)
-        ticket_attr = options.delete_if { |k, v| !@@allowed_attributes.include?(k) }
-        new_ticket = LighthouseAPI::Ticket.new(ticket_attr)
-        ticket_attr.delete(:project_id) || ticket_attr.delete('project_id')
+        new_ticket = LighthouseAPI::Ticket.new(:project_id => (options.first.delete(:project_id) || options.first.delete('project_id')).to_i)
         ticket_attr.each do |k, v|
           new_ticket.send(k + '=', v)
         end
         new_ticket.save
+        self.new new_ticket
       end
       
       # The saver
-      def save
-        ticket_attr = self.to_hash.delete_if { |k, v| !@@allowed_attributes.include?(k) || ticket.system_data[:client].send(k) == v }
-        lh_ticket = ticket.system_data[:client]
-        ticket_attr.each do |k, v|
-          lh_ticket.send(k + '=', v)
+      def save(*options)
+        lh_ticket = @system_data[:client]
+        self.keys.each do |key|
+          lh_ticket.send(key + '=', self.send(key)) if self.send(key) != lh_ticket.send(key)
         end
         lh_ticket.save
+      end
+      
+      def destroy(*options)
+        @system_data[:client].destroy
       end
       
       # The closer

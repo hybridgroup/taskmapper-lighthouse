@@ -87,6 +87,21 @@ module TicketMaster::Provider
           Ticket.find(:first, {:project_id => self.id}.merge(:q => first))
         end
       end
+      
+      # Save this project
+      def save
+        lighthouse = @system_data[:client]
+        lighthouse.attributes.each do |k, v|
+          lighthouse.send(k + '=', self.send(k)) if self.send(k) != v
+        end
+        lighthouse.save
+      end
+      
+      # Delete this project
+      def destroy
+        result = self.system_data[:client].destroy
+        result.is_a?(Net::HTTPOK)
+      end
 
     end
   end
