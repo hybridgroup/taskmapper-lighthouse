@@ -30,7 +30,6 @@ module TicketMaster::Provider
       @@allowed_states = ['new', 'open', 'resolved', 'hold', 'invalid']
       attr_accessor :prefix_options
       API = LighthouseAPI::Ticket
-      COMMENT = Lighthouse::Comment
       
       # This is to get the ticket id
       # We can't set ids, so there's no 'id=' method.
