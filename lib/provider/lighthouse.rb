@@ -2,6 +2,8 @@ module TicketMaster::Provider
   # This is the Lighthouse Provider for ticketmaster
   module Lighthouse
     include TicketMaster::Provider::Base
+    PROJECT_API = LighthouseAPI::Project
+    TICKET_API = LighthouseAPI::Ticket
     
     # This is for cases when you want to instantiate using TicketMaster::Provider::Lighthouse.new(auth)
     def self.new(auth = {})
@@ -27,19 +29,13 @@ module TicketMaster::Provider
     # end up using whatever the previous instantiated object's account info is.
     def projects(*options)
       authorize
-      projects = if options.length > 0
-        Project.find(*options)
-        else
-        Project.find(:all)
-        end
-      set_master_data(projects)
+      super(*options)
     end
     
     # The project
     def project(*options)
       authorize
-      return set_master_data(Project.find(:first, *options)) if options.length > 0
-      Project
+      super(*options)
     end
     
     # The tickets
@@ -55,33 +51,14 @@ module TicketMaster::Provider
     # the first project is.
     def tickets(*options)
       authorize
-      arg = options.shift
-      tickets = if arg.nil?
-        Ticket.find
-        elsif arg.is_a?(Fixnum)
-        Ticket.find(:all, :params => {:project_id => arg})
-        elsif arg.is_a?(Hash)
-        Ticket.find(:all, :params => arg) if arg.is_a?(Hash)
-        else
-        []
-        end
-      set_master_data(tickets)
+      super(*options)
     end
     
     # the ticket
     def ticket(*options)
       authorize
-      return set_master_data(Ticket.find(*options)) if options.length > 0
-      Ticket
+      super(*options)
     end
     
-    def set_master_data(data)
-      if data.is_a?(Array)
-        data.collect! { |p| p.system_data.merge!(:master => self); p }
-      else
-        data.system_data.merge!(:master => self)
-      end
-      data
-    end
   end
 end

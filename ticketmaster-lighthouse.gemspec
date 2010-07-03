@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Hong"]
-  s.date = %q{2010-06-25}
+  s.date = %q{2010-07-02}
   s.description = %q{Allows ticketmaster to interact with Lighthouse's issue tracking system.}
   s.email = %q{hong.quach@abigfisch.com}
   s.extra_rdoc_files = [
@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
      "lib/lighthouse/LICENSE",
      "lib/lighthouse/README.markdown",
      "lib/lighthouse/lighthouse-api.rb",
+     "lib/provider/comment.rb",
      "lib/provider/lighthouse.rb",
      "lib/provider/project.rb",
      "lib/provider/ticket.rb",
