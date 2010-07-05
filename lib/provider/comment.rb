@@ -47,7 +47,7 @@ module TicketMaster::Provider
         project_id = attributes.delete(:project_id) || attributes.delete('project_id')
         ticket = self::API.find(ticket_id, :params => {:project_id => project_id})
         attributes.each do |k, v|
-          ticket.send(k + '=', v)
+          ticket.send("#{k}=", v)
         end
         ticket.save
         self.find_by_id project_id, ticket_id, ticket.versions.length
