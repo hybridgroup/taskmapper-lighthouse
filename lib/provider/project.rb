@@ -11,6 +11,11 @@ module TicketMaster::Provider
         result = super
         result.is_a?(Net::HTTPOK)
       end
+      
+      # copy from this.copy(that) copies that into this
+      def copy(project)
+        project.tickets.each do |ticket|          copy_ticket = self.ticket!(:title => ticket.title, :description => ticket.body)          ticket.comments.each do |comment|            copy_ticket.comment!(:title => comment.body)            sleep 1          end        end
+      end
 
     end
   end
