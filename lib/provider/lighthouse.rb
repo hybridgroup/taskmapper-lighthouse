@@ -14,6 +14,9 @@ module TicketMaster::Provider
     def authorize(auth = {})
       @authentication ||= TicketMaster::Authenticator.new(auth)
       auth = @authentication
+      if auth.account.nil? or (auth.token.nil? and (auth.username.nil? and auth.password.nil?))
+        raise "Please provide at least an account (subdomain) and token or username and password)"
+      end
       LighthouseAPI.account = auth.account || auth.subdomain
       if auth.token
         LighthouseAPI.token = auth.token
