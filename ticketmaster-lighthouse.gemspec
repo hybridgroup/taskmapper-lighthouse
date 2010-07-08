@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ticketmaster-lighthouse}
-  s.version = "0.3.5"
+  s.version = "0.3.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Hong"]
@@ -31,11 +31,14 @@ Gem::Specification.new do |s|
      "lib/provider/project.rb",
      "lib/provider/ticket.rb",
      "lib/ticketmaster-lighthouse.rb",
+     "spec/comments_spec.rb",
      "spec/fixtures/projects.xml",
      "spec/fixtures/projects/54448.xml",
      "spec/fixtures/projects/create.xml",
      "spec/fixtures/tickets.xml",
+     "spec/fixtures/tickets/2.xml",
      "spec/fixtures/tickets/5.xml",
+     "spec/fixtures/tickets/create.xml",
      "spec/projects_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb",
@@ -49,7 +52,8 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Ticketmaster Provider for Lighthouse}
   s.test_files = [
-    "spec/projects_spec.rb",
+    "spec/comments_spec.rb",
+     "spec/projects_spec.rb",
      "spec/spec_helper.rb",
      "spec/ticketmaster-lighthouse_spec.rb",
      "spec/tickets_spec.rb"
