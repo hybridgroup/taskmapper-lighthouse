@@ -21,21 +21,21 @@ describe "Ticketmaster::Provider::Lighthouse::Ticket" do
   end
   
   it "should be able to load all tickets" do
-    @project.tickets.should be_an_instance_of Array
-    @project.tickets.first.should be_an_instance_of @klass
+    @project.tickets.should be_an_instance_of(Array)
+    @project.tickets.first.should be_an_instance_of(@klass)
   end
   
   it "should be able to load all tickets based on an array of ids" do
     @tickets = @project.tickets([5])
-    @tickets.should be_an_instance_of Array
-    @tickets.first.should be_an_instance_of @klass
+    @tickets.should be_an_instance_of(Array)
+    @tickets.first.should be_an_instance_of(@klass)
     @tickets.first.id.should == 5
   end
   
   it "should be able to load all tickets based on attributes" do
     @tickets = @project.tickets(:id => 5)
-    @tickets.should be_an_instance_of Array
-    @tickets.first.should be_an_instance_of @klass
+    @tickets.should be_an_instance_of(Array)
+    @tickets.first.should be_an_instance_of(@klass)
     @tickets.first.id.should == 5
   end
   
@@ -45,13 +45,13 @@ describe "Ticketmaster::Provider::Lighthouse::Ticket" do
   
   it "should be able to load a single ticket" do
     @ticket = @project.ticket(5)
-    @ticket.should be_an_instance_of @klass
+    @ticket.should be_an_instance_of(@klass)
     @ticket.id.should == 5
   end
   
   it "should be able to load a single ticket based on attributes" do
     @ticket = @project.ticket(:id => 5)
-    @ticket.should be_an_instance_of @klass
+    @ticket.should be_an_instance_of(@klass)
     @ticket.id.should == 5
   end
   
@@ -64,7 +64,7 @@ describe "Ticketmaster::Provider::Lighthouse::Ticket" do
   
   it "should be able to create a ticket" do
     @ticket = @project.ticket!(:title => 'Ticket #12', :description => 'Body')
-    @ticket.should be_an_instance_of @klass
+    @ticket.should be_an_instance_of(@klass)
   end
   
 end
