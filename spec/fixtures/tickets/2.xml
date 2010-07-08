@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ticket>
+  <assigned-user-id type="integer">67916</assigned-user-id>
+  <attachments-count type="integer">0</attachments-count>
+  <closed type="boolean">false</closed>
+  <created-at type="datetime">2010-07-02T23:13:29Z</created-at>
+  <creator-id type="integer">67916</creator-id>
+  <milestone-due-on type="datetime" nil="true"></milestone-due-on>
+  <milestone-id type="integer" nil="true"></milestone-id>
+  <number type="integer">2</number>
+  <permalink>test-ticket</permalink>
+  <priority type="integer">2</priority>
+  <project-id type="integer">54448</project-id>
+  <raw-data type="binary" encoding="base64" nil="true"></raw-data>
+  <state>new</state>
+  <tag>choom heh pers &quot;tag1 tagster&quot; &quot;wha wha waa&quot;</tag>
+  <title>Cheese cakes</title>
+  <updated-at type="datetime">2010-07-02T23:14:06Z</updated-at>
+  <user-id type="integer">67916</user-id>
+  <user-name>Kia Kroas</user-name>
+  <creator-name>Kia Kroas</creator-name>
+  <assigned-user-name>Kia Kroas</assigned-user-name>
+  <url>http://ticketmaster.lighthouseapp.com/projects/54448/tickets/2</url>
+  <original-body>nt.,hntHOETUHAONTUHANOSTEUHANTOU</original-body>
+  <latest-body>nt.,hntHOETUHAONTUHANOSTEUHANTOU</latest-body>
+  <original-body-html>&lt;div&gt;&lt;p&gt;nt.,hntHOETUHAONTUHANOSTEUHANTOU&lt;/p&gt;&lt;/div&gt;</original-body-html>
+  <versions type="array">
+    <version type="Ticket::Version">
+      <assigned-user-id type="integer" nil="true"></assigned-user-id>
+      <attachments-count type="integer">0</attachments-count>
+      <body>nt.,hntHOETUHAONTUHANOSTEUHANTOU</body>
+      <body-html>&lt;div&gt;&lt;p&gt;nt.,hntHOETUHAONTUHANOSTEUHANTOU&lt;/p&gt;&lt;/div&gt;</body-html>
+      <closed type="boolean">false</closed>
+      <created-at type="datetime">2010-06-15T00:50:22Z</created-at>
+      <creator-id type="integer">67916</creator-id>
+      <diffable-attributes type="yaml">--- {}
+
+</diffable-attributes>
+      <milestone-id type="integer" nil="true"></milestone-id>
+      <number type="integer">2</number>
+      <permalink>test-ticket</permalink>
+      <priority type="integer">0</priority>
+      <project-id type="integer">54448</project-id>
+      <state>new</state>
+      <tag nil="true"></tag>
+      <title>Test ticket</title>
+      <updated-at type="datetime">2010-06-29T22:36:01Z</updated-at>
+      <user-id type="integer">67916</user-id>
+      <user-name>Kia Kroas</user-name>
+      <creator-name>Kia Kroas</creator-name>
+      <assigned-user-name nil="true"></assigned-user-name>
+      <url>http://ticketmaster.lighthouseapp.com/projects/54448/tickets/2</url>
+    </version>
+    <version type="Ticket::Version">
+      <assigned-user-id type="integer" nil="true"></assigned-user-id>
+      <attachments-count type="integer">0</attachments-count>
+      <body nil="true"></body>
+      <body-html nil="true"></body-html>
+      <closed type="boolean">false</closed>
+      <created-at type="datetime">2010-06-15T01:39:36Z</created-at>
+      <creator-id type="integer">67916</creator-id>
+      <diffable-attributes type="yaml">--- 
+:title: Test ticket
+</diffable-attributes>
+      <milestone-id type="integer" nil="true"></milestone-id>
+      <number type="integer">2</number>
+      <permalink>test-ticket</permalink>
+      <priority type="integer">0</priority>
+      <project-id type="integer">54448</project-id>
+      <state>new</state>
+      <tag nil="true"></tag>
+      <title>Cheese cakes</title>
+      <updated-at type="datetime">2010-06-15T01:39:40Z</updated-at>
+      <user-id type="integer">67916</user-id>
+      <user-name>Kia Kroas</user-name>
+      <creator-name>Kia Kroas</creator-name>
+      <assigned-user-name nil="true"></assigned-user-name>
+      <url>http://ticketmaster.lighthouseapp.com/projects/54448/tickets/2</url>
+    </version>
+    <version type="Ticket::Version">
+      <assigned-user-id type="integer">67916</assigned-user-id>
+      <attachments-count type="integer">0</attachments-count>
+      <body>Rokatoo</body>
+      <body-html>&lt;div&gt;&lt;p&gt;Rokatoo&lt;/p&gt;&lt;/div&gt;</body-html>
+      <closed type="boolean">false</closed>
+      <created-at type="datetime">2010-06-29T22:35:37Z</created-at>
+      <creator-id type="integer">67916</creator-id>
+      <diffable-attributes type="yaml">--- 
+:assigned_user: 
+:priority: 0
+:tag: 
+</diffable-attributes>
+      <milestone-id type="integer" nil="true"></milestone-id>
+      <number type="integer">2</number>
+      <permalink>test-ticket</permalink>
+      <priority type="integer">2</priority>
+      <project-id type="integer">54448</project-id>
+      <state>new</state>
+      <tag>&quot;tag1 tagster&quot;</tag>
+      <title>Cheese cakes</title>
+      <updated-at type="datetime">2010-06-29T22:35:39Z</updated-at>
+      <user-id type="integer">67916</user-id>
+      <user-name>Kia Kroas</user-name>
+      <creator-name>Kia Kroas</creator-name>
+      <assigned-user-name>Kia Kroas</assigned-user-name>
+      <url>http://ticketmaster.lighthouseapp.com/projects/54448/tickets/2</url>
+    </version>
+    <version type="Ticket::Version">
+      <assigned-user-id type="integer">67916</assigned-user-id>
+      <attachments-count type="integer">0</attachments-count>
+      <body>This is a ticket set from tm console</body>
+      <body-html>&lt;div&gt;&lt;p&gt;This is a ticket set from tm console&lt;/p&gt;&lt;/div&gt;</body-html>
+      <closed type="boolean">false</closed>
+      <created-at type="datetime">2010-07-02T05:32:19Z</created-at>
+      <creator-id type="integer">67916</creator-id>
+      <diffable-attributes type="yaml">--- {}
+
+</diffable-attributes>
+      <milestone-id type="integer" nil="true"></milestone-id>
+      <number type="integer">2</number>
+      <permalink>test-ticket</permalink>
+      <priority type="integer">2</priority>
+      <project-id type="integer">54448</project-id>
+      <state>new</state>
+      <tag>&quot;tag1 tagster&quot;</tag>
+      <title>Cheese cakes</title>
+      <updated-at type="datetime">2010-07-02T05:32:20Z</updated-at>
+      <user-id type="integer">67916</user-id>
+      <user-name>Kia Kroas</user-name>
+      <creator-name>Kia Kroas</creator-name>
+      <assigned-user-name>Kia Kroas</assigned-user-name>
+      <url>http://ticketmaster.lighthouseapp.com/projects/54448/tickets/2</url>
+    </version>
+    <version type="Ticket::Version">
+      <assigned-user-id type="integer">67916</assigned-user-id>
+      <attachments-count type="integer">0</attachments-count>
+      <body>What the hey?</body>
+      <body-html>&lt;div&gt;&lt;p&gt;What the hey?&lt;/p&gt;&lt;/div&gt;</body-html>
+      <closed type="boolean">false</closed>
+      <created-at type="datetime">2010-07-02T05:32:49Z</created-at>
+      <creator-id type="integer">67916</creator-id>
+      <diffable-attributes type="yaml">--- {}
+
+</diffable-attributes>
+      <milestone-id type="integer" nil="true"></milestone-id>
+      <number type="integer">2</number>
+      <permalink>test-ticket</permalink>
+      <priority type="integer">2</priority>
+      <project-id type="integer">54448</project-id>
+      <state>new</state>
+      <tag>&quot;tag1 tagster&quot;</tag>
+      <title>Cheese cakes</title>
+      <updated-at type="datetime">2010-07-02T05:32:51Z</updated-at>
+      <user-id type="integer">67916</user-id>
+      <user-name>Kia Kroas</user-name>
+      <creator-name>Kia Kroas</creator-name>
+      <assigned-user-name>Kia Kroas</assigned-user-name>
+      <url>http://ticketmaster.lighthouseapp.com/projects/54448/tickets/2</url>
+    </version>
+    <version type="Ticket::Version">
+      <assigned-user-id type="integer">67916</assigned-user-id>
+      <attachments-count type="integer">0</attachments-count>
+      <body>What the hey?</body>
+      <body-html>&lt;div&gt;&lt;p&gt;What the hey?&lt;/p&gt;&lt;/div&gt;</body-html>
+      <closed type="boolean">false</closed>
+      <created-at type="datetime">2010-07-02T05:34:24Z</created-at>
+      <creator-id type="integer">67916</creator-id>
+      <diffable-attributes type="yaml">--- {}
+
+</diffable-attributes>
+      <milestone-id type="integer" nil="true"></milestone-id>
+      <number type="integer">2</number>
+      <permalink>test-ticket</permalink>
+      <priority type="integer">2</priority>
+      <project-id type="integer">54448</project-id>
+      <state>new</state>
+      <tag>&quot;tag1 tagster&quot;</tag>
+      <title>Cheese cakes</title>
+      <updated-at type="datetime">2010-07-02T05:34:27Z</updated-at>
+      <user-id type="integer">67916</user-id>
+      <user-name>Kia Kroas</user-name>
+      <creator-name>Kia Kroas</creator-name>
+      <assigned-user-name>Kia Kroas</assigned-user-name>
+      <url>http://ticketmaster.lighthouseapp.com/projects/54448/tickets/2</url>
+    </version>
+    <version type="Ticket::Version">
+      <assigned-user-id type="integer">67916</assigned-user-id>
+      <attachments-count type="integer">0</attachments-count>
+      <body></body>
+      <body-html></body-html>
+      <closed type="boolean">false</closed>
+      <created-at type="datetime">2010-07-02T05:39:37Z</created-at>
+      <creator-id type="integer">67916</creator-id>
+      <diffable-attributes type="yaml">--- 
+:tag: &quot;\&quot;tag1 tagster\&quot;&quot;
+</diffable-attributes>
+      <milestone-id type="integer" nil="true"></milestone-id>
+      <number type="integer">2</number>
+      <permalink>test-ticket</permalink>
+      <priority type="integer">2</priority>
+      <project-id type="integer">54448</project-id>
+      <state>new</state>
+      <tag>&quot;tag1 tagster&quot; &quot;wha wha waa&quot;</tag>
+      <title>Cheese cakes</title>
+      <updated-at type="datetime">2010-07-02T05:39:40Z</updated-at>
+      <user-id type="integer">67916</user-id>
+      <user-name>Kia Kroas</user-name>
+      <creator-name>Kia Kroas</creator-name>
+      <assigned-user-name>Kia Kroas</assigned-user-name>
+      <url>http://ticketmaster.lighthouseapp.com/projects/54448/tickets/2</url>
+    </version>
+    <version type="Ticket::Version">
+      <assigned-user-id type="integer">67916</assigned-user-id>
+      <attachments-count type="integer">0</attachments-count>
+      <body></body>
+      <body-html></body-html>
+      <closed type="boolean">false</closed>
+      <created-at type="datetime">2010-07-02T05:40:03Z</created-at>
+      <creator-id type="integer">67916</creator-id>
+      <diffable-attributes type="yaml">--- 
+:tag: &quot;\&quot;tag1 tagster\&quot; \&quot;wha wha waa\&quot;&quot;
+</diffable-attributes>
+      <milestone-id type="integer" nil="true"></milestone-id>
+      <number type="integer">2</number>
+      <permalink>test-ticket</permalink>
+      <priority type="integer">2</priority>
+      <project-id type="integer">54448</project-id>
+      <state>new</state>
+      <tag>choom heh pers &quot;tag1 tagster&quot; &quot;wha wha waa&quot;</tag>
+      <title>Cheese cakes</title>
+      <updated-at type="datetime">2010-07-02T05:40:04Z</updated-at>
+      <user-id type="integer">67916</user-id>
+      <user-name>Kia Kroas</user-name>
+      <creator-name>Kia Kroas</creator-name>
+      <assigned-user-name>Kia Kroas</assigned-user-name>
+      <url>http://ticketmaster.lighthouseapp.com/projects/54448/tickets/2</url>
+    </version>
+    <version type="Ticket::Version">
+      <assigned-user-id type="integer">67916</assigned-user-id>
+      <attachments-count type="integer">0</attachments-count>
+      <body>taoh natht aehu sa utaohe nsahu saeho nsahoeunsau '</body>
+      <body-html>&lt;div&gt;&lt;p&gt;taoh natht aehu sa utaohe nsahu saeho nsahoeunsau '&lt;/p&gt;&lt;/div&gt;</body-html>
+      <closed type="boolean">false</closed>
+      <created-at type="datetime">2010-07-02T06:11:06Z</created-at>
+      <creator-id type="integer">67916</creator-id>
+      <diffable-attributes type="yaml">--- {}
+
+</diffable-attributes>
+      <milestone-id type="integer" nil="true"></milestone-id>
+      <number type="integer">2</number>
+      <permalink>test-ticket</permalink>
+      <priority type="integer">2</priority>
+      <project-id type="integer">54448</project-id>
+      <state>new</state>
+      <tag>choom heh pers &quot;tag1 tagster&quot; &quot;wha wha waa&quot;</tag>
+      <title>Cheese cakes</title>
+      <updated-at type="datetime">2010-07-02T06:11:06Z</updated-at>
+      <user-id type="integer">67916</user-id>
+      <user-name>Kia Kroas</user-name>
+      <creator-name>Kia Kroas</creator-name>
+      <assigned-user-name>Kia Kroas</assigned-user-name>
+      <url>http://ticketmaster.lighthouseapp.com/projects/54448/tickets/2</url>
+    </version>
+    <version type="Ticket::Version">
+      <assigned-user-id type="integer">67916</assigned-user-id>
+      <attachments-count type="integer">0</attachments-count>
+      <body nil="true"></body>
+      <body-html nil="true"></body-html>
+      <closed type="boolean">false</closed>
+      <created-at type="datetime">2010-07-02T20:01:33Z</created-at>
+      <creator-id type="integer">67916</creator-id>
+      <diffable-attributes type="yaml">--- {}
+
+</diffable-attributes>
+      <milestone-id type="integer" nil="true"></milestone-id>
+      <number type="integer">2</number>
+      <permalink>test-ticket</permalink>
+      <priority type="integer">2</priority>
+      <project-id type="integer">54448</project-id>
+      <state>new</state>
+      <tag>choom heh pers &quot;tag1 tagster&quot; &quot;wha wha waa&quot;</tag>
+      <title>Cheese cakes</title>
+      <updated-at type="datetime">2010-07-02T20:01:36Z</updated-at>
+      <user-id type="integer">67916</user-id>
+      <user-name>Kia Kroas</user-name>
+      <creator-name>Kia Kroas</creator-name>
+      <assigned-user-name>Kia Kroas</assigned-user-name>
+      <url>http://ticketmaster.lighthouseapp.com/projects/54448/tickets/2</url>
+    </version>
+    <version type="Ticket::Version">
+      <assigned-user-id type="integer">67916</assigned-user-id>
+      <attachments-count type="integer">0</attachments-count>
+      <body>tt</body>
+      <body-html>&lt;div&gt;&lt;p&gt;tt&lt;/p&gt;&lt;/div&gt;</body-html>
+      <closed type="boolean">false</closed>
+      <created-at type="datetime">2010-07-02T20:02:25Z</created-at>
+      <creator-id type="integer">67916</creator-id>
+      <diffable-attributes type="yaml">--- {}
+
+</diffable-attributes>
+      <milestone-id type="integer" nil="true"></milestone-id>
+      <number type="integer">2</number>
+      <permalink>test-ticket</permalink>
+      <priority type="integer">2</priority>
+      <project-id type="integer">54448</project-id>
+      <state>new</state>
+      <tag>choom heh pers &quot;tag1 tagster&quot; &quot;wha wha waa&quot;</tag>
+      <title>Cheese cakes</title>
+      <updated-at type="datetime">2010-07-02T23:14:04Z</updated-at>
+      <user-id type="integer">67916</user-id>
+      <user-name>Kia Kroas</user-name>
+      <creator-name>Kia Kroas</creator-name>
+      <assigned-user-name>Kia Kroas</assigned-user-name>
+      <url>http://ticketmaster.lighthouseapp.com/projects/54448/tickets/2</url>
+    </version>
+  </versions>
+</ticket>

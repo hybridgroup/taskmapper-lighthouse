@@ -66,7 +66,7 @@ module TicketMaster::Provider
       
       # Set the description, mapped to body, which actually does a comment
       def description=(desc)
-        body = desc
+        self.body = desc
       end
       
       # Get the assigned person's name
@@ -105,9 +105,10 @@ module TicketMaster::Provider
           t = "\"#{t}\"" if t.include?(' ')
           mem << t
         end.join(' ') if @tags
-        super
+        result = super
         body = nil
         @system_data[:client].body = nil
+        result
       end
       
       # The closer

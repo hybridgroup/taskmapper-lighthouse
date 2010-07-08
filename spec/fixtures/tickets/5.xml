@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ticket>
+  <assigned-user-id type="integer" nil="true"></assigned-user-id>
+  <attachments-count type="integer">0</attachments-count>
+  <closed type="boolean">false</closed>
+  <created-at type="datetime">2010-07-03T05:01:48Z</created-at>
+  <creator-id type="integer">67916</creator-id>
+  <milestone-due-on type="datetime" nil="true"></milestone-due-on>
+  <milestone-id type="integer" nil="true"></milestone-id>
+  <number type="integer">5</number>
+  <permalink>tehantuehn</permalink>
+  <priority type="integer">3</priority>
+  <project-id type="integer">54448</project-id>
+  <raw-data type="binary" encoding="base64" nil="true"></raw-data>
+  <state>new</state>
+  <tag nil="true"></tag>
+  <title>tehantuehn</title>
+  <updated-at type="datetime">2010-07-08T02:11:21Z</updated-at>
+  <user-id type="integer">67916</user-id>
+  <user-name>Kia Kroas</user-name>
+  <creator-name>Kia Kroas</creator-name>
+  <url>http://ticketmaster.lighthouseapp.com/projects/54448/tickets/5</url>
+  <original-body>cheuasoht atesuhn</original-body>
+  <latest-body>cheuasoht atesuhn</latest-body>
+  <original-body-html>&lt;div&gt;&lt;p&gt;cheuasoht atesuhn&lt;/p&gt;&lt;/div&gt;</original-body-html>
+  <versions type="array">
+    <version type="Ticket::Version">
+      <assigned-user-id type="integer" nil="true"></assigned-user-id>
+      <attachments-count type="integer">0</attachments-count>
+      <body>cheuasoht atesuhn</body>
+      <body-html>&lt;div&gt;&lt;p&gt;cheuasoht atesuhn&lt;/p&gt;&lt;/div&gt;</body-html>
+      <closed type="boolean">false</closed>
+      <created-at type="datetime">2010-07-03T05:01:48Z</created-at>
+      <creator-id type="integer">67916</creator-id>
+      <diffable-attributes type="yaml">--- {}
+
+</diffable-attributes>
+      <milestone-id type="integer" nil="true"></milestone-id>
+      <number type="integer">5</number>
+      <permalink>tehantuehn</permalink>
+      <priority type="integer">3</priority>
+      <project-id type="integer">54448</project-id>
+      <state>new</state>
+      <tag nil="true"></tag>
+      <title>tehantuehn</title>
+      <updated-at type="datetime">2010-07-03T05:01:51Z</updated-at>
+      <user-id type="integer">67916</user-id>
+      <user-name>Kia Kroas</user-name>
+      <creator-name>Kia Kroas</creator-name>
+      <url>http://ticketmaster.lighthouseapp.com/projects/54448/tickets/5</url>
+    </version>
+    <version type="Ticket::Version">
+      <assigned-user-id type="integer" nil="true"></assigned-user-id>
+      <attachments-count type="integer">0</attachments-count>
+      <body>New Body</body>
+      <body-html>&lt;div&gt;&lt;p&gt;New Body&lt;/p&gt;&lt;/div&gt;</body-html>
+      <closed type="boolean">false</closed>
+      <created-at type="datetime">2010-07-08T02:11:17Z</created-at>
+      <creator-id type="integer">67916</creator-id>
+      <diffable-attributes type="yaml">--- {}
+
+</diffable-attributes>
+      <milestone-id type="integer" nil="true"></milestone-id>
+      <number type="integer">5</number>
+      <permalink>tehantuehn</permalink>
+      <priority type="integer">3</priority>
+      <project-id type="integer">54448</project-id>
+      <state>new</state>
+      <tag nil="true"></tag>
+      <title>tehantuehn</title>
+      <updated-at type="datetime">2010-07-08T02:11:21Z</updated-at>
+      <user-id type="integer">67916</user-id>
+      <user-name>Kia Kroas</user-name>
+      <creator-name>Kia Kroas</creator-name>
+      <url>http://ticketmaster.lighthouseapp.com/projects/54448/tickets/5</url>
+    </version>
+  </versions>
+</ticket>

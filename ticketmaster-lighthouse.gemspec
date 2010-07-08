@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Hong"]
-  s.date = %q{2010-07-06}
+  s.date = %q{2010-07-07}
   s.description = %q{Allows ticketmaster to interact with Lighthouse's issue tracking system.}
   s.email = %q{hong.quach@abigfisch.com}
   s.extra_rdoc_files = [
@@ -31,9 +31,16 @@ Gem::Specification.new do |s|
      "lib/provider/project.rb",
      "lib/provider/ticket.rb",
      "lib/ticketmaster-lighthouse.rb",
+     "spec/fixtures/projects.xml",
+     "spec/fixtures/projects/54448.xml",
+     "spec/fixtures/projects/create.xml",
+     "spec/fixtures/tickets.xml",
+     "spec/fixtures/tickets/5.xml",
+     "spec/projects_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb",
      "spec/ticketmaster-lighthouse_spec.rb",
+     "spec/tickets_spec.rb",
      "ticketmaster-lighthouse.gemspec"
   ]
   s.homepage = %q{http://github.com/kiafaldorius/ticketmaster-lighthouse}
@@ -42,8 +49,10 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Ticketmaster Provider for Lighthouse}
   s.test_files = [
-    "spec/spec_helper.rb",
-     "spec/ticketmaster-lighthouse_spec.rb"
+    "spec/projects_spec.rb",
+     "spec/spec_helper.rb",
+     "spec/ticketmaster-lighthouse_spec.rb",
+     "spec/tickets_spec.rb"
   ]
 
   if s.respond_to? :specification_version then
