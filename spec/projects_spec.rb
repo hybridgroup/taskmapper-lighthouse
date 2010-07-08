@@ -22,37 +22,37 @@ describe "Ticketmaster::Provider::Lighthouse::Project" do
   end
   
   it "should be able to load all projects" do
-    @ticketmaster.projects.should be_an_instance_of Array
-    @ticketmaster.projects.first.should be_an_instance_of @klass
+    @ticketmaster.projects.should be_an_instance_of(Array)
+    @ticketmaster.projects.first.should be_an_instance_of(@klass)
   end
   
   it "should be able to load projects from an array of ids" do
     @projects = @ticketmaster.projects([@project_id])
-    @projects.should be_an_instance_of Array
-    @projects.first.should be_an_instance_of @klass
+    @projects.should be_an_instance_of(Array)
+    @projects.first.should be_an_instance_of(@klass)
     @projects.first.id.should == @project_id
   end
   
   it "should be able to load all projects from attributes" do
     @projects = @ticketmaster.projects(:id => @project_id)
-    @projects.should be_an_instance_of Array
-    @projects.first.should be_an_instance_of @klass
+    @projects.should be_an_instance_of(Array)
+    @projects.first.should be_an_instance_of(@klass)
     @projects.first.id.should == @project_id
   end
   
   it "should be able to find a project" do
     @ticketmaster.project.should == @klass
-    @ticketmaster.project.find(@project_id).should be_an_instance_of @klass
+    @ticketmaster.project.find(@project_id).should be_an_instance_of(@klass)
   end
   
   it "should be able to find a project by id" do
-    @ticketmaster.project(@project_id).should be_an_instance_of @klass
+    @ticketmaster.project(@project_id).should be_an_instance_of(@klass)
     @ticketmaster.project(@project_id).id.should == @project_id
   end
   
   it "should be able to find a project by attributes" do
     @ticketmaster.project(:id => @project_id).id.should == @project_id
-    @ticketmaster.project(:id => @project_id).should be_an_instance_of @klass
+    @ticketmaster.project(:id => @project_id).should be_an_instance_of(@klass)
   end
   
   it "should be able to update and save a project" do
@@ -65,7 +65,7 @@ describe "Ticketmaster::Provider::Lighthouse::Project" do
   
   it "should be able to create a project" do
     @project = @ticketmaster.project.create(:name => 'Project #1')
-    @project.should be_an_instance_of @klass
+    @project.should be_an_instance_of(@klass)
   end
 
 end

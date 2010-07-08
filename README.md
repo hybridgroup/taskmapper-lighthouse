@@ -50,4 +50,4 @@ If you see or find any issues, feel free to open up an issue report.
 
 ## Copyright
 
-Copyright (c) 2010 HybridGroup. See LICENSE for details.
+Copyright (c) 2010 The Hybrid Group. See LICENSE for details.
