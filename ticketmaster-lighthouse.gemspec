@@ -66,21 +66,21 @@ Gem::Specification.new do |s|
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<rspec>, [">= 1.2.9"])
       s.add_runtime_dependency(%q<ticketmaster>, [">= 0.3.0"])
-      s.add_runtime_dependency(%q<activesupport>, [">= 2.3.2"])
-      s.add_runtime_dependency(%q<activeresource>, [">= 2.3.2"])
+      s.add_runtime_dependency(%q<activesupport>, ["~> 2.3.2"])
+      s.add_runtime_dependency(%q<activeresource>, ["~> 2.3.2"])
       s.add_runtime_dependency(%q<addressable>, [">= 2.1.2"])
     else
       s.add_dependency(%q<rspec>, [">= 1.2.9"])
       s.add_dependency(%q<ticketmaster>, [">= 0.3.0"])
-      s.add_dependency(%q<activesupport>, [">= 2.3.2"])
-      s.add_dependency(%q<activeresource>, [">= 2.3.2"])
+      s.add_dependency(%q<activesupport>, ["~> 2.3.2"])
+      s.add_dependency(%q<activeresource>, ["~> 2.3.2"])
       s.add_dependency(%q<addressable>, [">= 2.1.2"])
     end
   else
     s.add_dependency(%q<rspec>, [">= 1.2.9"])
     s.add_dependency(%q<ticketmaster>, [">= 0.3.0"])
-    s.add_dependency(%q<activesupport>, [">= 2.3.2"])
-    s.add_dependency(%q<activeresource>, [">= 2.3.2"])
+    s.add_dependency(%q<activesupport>, ["~> 2.3.2"])
+    s.add_dependency(%q<activeresource>, ["~> 2.3.2"])
     s.add_dependency(%q<addressable>, [">= 2.1.2"])
   end
 end
