@@ -45,23 +45,23 @@ module TicketMaster::Provider
       # This is to set the status, mapped to state
       def status=(stat)
         stat = state unless @@allowed_states.include?(stat)
-        state = stat
+        self.state = stat
       end
       
       # Get the resolution, mapped to latest_body
       def resolution
-        latest_body
+        self.latest_body
       end
       
       # Set the resolution...also sets state to resolved
       def resolution=(res)
         state = 'resolved'
-        body = res
+        self.body = res
       end
       
       # Get the description, mapped to original_body
       def description
-        original_body
+        self.original_body
       end
       
       # Set the description, mapped to body, which actually does a comment
@@ -71,12 +71,12 @@ module TicketMaster::Provider
       
       # Get the assigned person's name
       def assignee
-        assigned_user_name
+        self.assigned_user_name
       end
       
       # Get the requestor's name
       def requestor
-        creator_name
+        self.creator_name
       end
       
       # Get the project id
@@ -101,10 +101,10 @@ module TicketMaster::Provider
       
       # Gotta unset the body attribute...otherwise every save ends up using that body
       def save
-        tag = @tags.reduce([]) do |mem, t|
-          t = "\"#{t}\"" if t.include?(' ')
-          mem << t
-        end.join(' ') if @tags
+#        self.tag = @tags.reduce([]) do |mem, t|
+#          t = "\"#{t}\"" if t.include?(' ')
+#          mem << t
+#        end.join(' ') if @tags
         result = super
         body = nil
         @system_data[:client].body = nil

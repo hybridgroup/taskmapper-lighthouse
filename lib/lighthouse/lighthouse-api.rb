@@ -257,14 +257,14 @@ module LighthouseAPI
       attributes['body_html'] = value
     end
 
-    def save_with_tags
-      self.tag = @tags.collect do |tag|
-        tag.include?(' ') ? tag.inspect : tag
-      end.join(" ") if @tags.is_a?(Array)
-      @tags = nil ; save_without_tags
-    end
-    
-    alias_method_chain :save, :tags
+#    def save_with_tags
+#      self.tag = @tags.collect do |tag|
+#        tag.include?(' ') ? tag.inspect : tag
+#      end.join(" ") if @tags.is_a?(Array)
+#      @tags = nil ; save_without_tags
+#    end
+#    
+#    alias_method_chain :save, :tags
 
     private
       # taken from Lighthouse Tag code
