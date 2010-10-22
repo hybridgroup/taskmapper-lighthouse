@@ -5,7 +5,7 @@ module TicketMaster::Provider
     # 
     class Project < TicketMaster::Provider::Base::Project
       attr_accessor :prefix_options
-      API = LighthouseAPI::Project  
+      API = ::Lighthouse::Project  
       # Delete this project
       def destroy
         result = super

@@ -13,13 +13,13 @@ module TicketMaster::Provider
     # * ticket_id => number (read-only)
     # * project_id => (set by the initializer)
     class Comment < TicketMaster::Provider::Base::Comment
-      API = LighthouseAPI::Ticket
+      API = ::Lighthouse::Ticket
       
       # A custom find_by_id
       # The "comment" id is it's index in the versions array. An id of 0 therefore exists and
       # should be the first ticket (original)
       def self.find_by_id(project_id, ticket_id, id)
-        self.new LighthouseAPI::Ticket.find(ticket_id, :params => {:project_id => project_id}), id
+        self.new API.find(ticket_id, :params => {:project_id => project_id}), id
       end
       
       # A custom find_by_attributes
@@ -49,7 +49,9 @@ module TicketMaster::Provider
         attributes.each do |k, v|
           ticket.send("#{k}=", v)
         end
+        versions = ticket.attributes.delete('versions')
         ticket.save
+        ticket.attributes['versions'] = versions
         self.find_by_id project_id, ticket_id, ticket.versions.length
       end
       
@@ -66,7 +68,7 @@ module TicketMaster::Provider
       #
       # It returns a custom result because we need the original ticket to make a comment.
       def self.search(project_id, ticket_id, options = {}, limit = 1000)
-        ticket = LighthouseAPI::Ticket.find(ticket_id, :params => {:project_id => project_id})
+        ticket = API.find(ticket_id, :params => {:project_id => project_id})
         comments = ticket.versions
         [search_by_attribute(comments, options, limit), ticket]
       end

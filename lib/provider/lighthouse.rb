@@ -2,8 +2,8 @@ module TicketMaster::Provider
   # This is the Lighthouse Provider for ticketmaster
   module Lighthouse
     include TicketMaster::Provider::Base
-    PROJECT_API = LighthouseAPI::Project
-    TICKET_API = LighthouseAPI::Ticket
+    PROJECT_API = ::Lighthouse::Project
+    TICKET_API = ::Lighthouse::Ticket
     
     # This is for cases when you want to instantiate using TicketMaster::Provider::Lighthouse.new(auth)
     def self.new(auth = {})
@@ -17,11 +17,11 @@ module TicketMaster::Provider
       if auth.account.nil? or (auth.token.nil? and (auth.username.nil? and auth.password.nil?))
         raise "Please provide at least an account (subdomain) and token or username and password)"
       end
-      LighthouseAPI.account = auth.account || auth.subdomain
+      ::Lighthouse.account = auth.account || auth.subdomain
       if auth.token
-        LighthouseAPI.token = auth.token
+        ::Lighthouse.token = auth.token
       elsif auth.username && auth.password
-        LighthouseAPI.authenticate(auth.username, auth.password)
+        ::Lighthouse.authenticate(auth.username, auth.password)
       end
     end
     

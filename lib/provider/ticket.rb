@@ -29,7 +29,7 @@ module TicketMaster::Provider
     class Ticket < TicketMaster::Provider::Base::Ticket
       @@allowed_states = ['new', 'open', 'resolved', 'hold', 'invalid']
       attr_accessor :prefix_options
-      API = LighthouseAPI::Ticket
+      API = ::Lighthouse::Ticket
       
       # This is to get the ticket id
       # We can't set ids, so there's no 'id=' method.
@@ -105,6 +105,7 @@ module TicketMaster::Provider
 #          t = "\"#{t}\"" if t.include?(' ')
 #          mem << t
 #        end.join(' ') if @tags
+        @system_data[:client].attributes.delete('versions')
         result = super
         body = nil
         @system_data[:client].body = nil
@@ -114,7 +115,7 @@ module TicketMaster::Provider
       # The closer
       def close(resolution = 'resolved')
         resolution = 'resolved' unless @@allowed_states.include?(resolution)
-        ticket = LighthouseAPI::Ticket.find(self.id, :params => {:project_id => self.prefix_options[:project_id]})
+        ticket = ::Lighthouse::Ticket.find(self.id, :params => {:project_id => self.prefix_options[:project_id]})
         ticket.state = resolution
         ticket.save
       end

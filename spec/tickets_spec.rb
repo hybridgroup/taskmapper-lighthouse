@@ -59,11 +59,7 @@ describe "Ticketmaster::Provider::Lighthouse::Ticket" do
     @ticket = @project.ticket(5)
     @ticket.save.should == nil
     @ticket.description = 'hello'
-    begin
-    @ticket.save.should == true
-    rescue Exception => e
-      raise e.backtrace.join("\n")
-    end
+    @ticket.save.should be_true
   end
   
   it "should be able to create a ticket" do
