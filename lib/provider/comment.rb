@@ -26,6 +26,7 @@ module TicketMaster::Provider
       #
       def self.find_by_attributes(project_id, ticket_id, attributes = {})
         result = self.search(project_id, ticket_id, attributes)
+        result[0].shift
         result[0].collect do |comment|
           self.new(result[1], index_of(result[1].versions, comment))
         end
