@@ -28,8 +28,8 @@ module TicketMaster::Provider
         result = self.search(project_id, ticket_id, attributes)
         result[0].shift
         result[0].collect do |comment|
-          self.new(result[1], index_of(result[1].versions, comment))
-        end
+          self.new(result[1], index_of(result[1].versions, comment)) if !comment.body.blank?
+        end.compact
       end
       
       # The Array#index method doesn't work for the versions...
