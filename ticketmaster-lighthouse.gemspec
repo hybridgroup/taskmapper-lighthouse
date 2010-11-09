@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ticketmaster-lighthouse}
-  s.version = "0.5.1"
+  s.version = "0.5.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Hong"]
-  s.date = %q{2010-10-26}
+  s.date = %q{2010-11-08}
   s.description = %q{Allows ticketmaster to interact with Lighthouse's issue tracking system.}
   s.email = %q{hong.quach@abigfisch.com}
   s.extra_rdoc_files = [
