@@ -1,5 +1,5 @@
 require 'lighthouse-api'
-
+require File.dirname(__FILE__) + '/api/monkey.rb'
 # Monkey Patch - remove when the lighthouse gem gets updated.
 # texel's changes got merged, but looks like a new gem didn't get released. ugh!
 module Lighthouse
