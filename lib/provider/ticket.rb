@@ -30,12 +30,19 @@ module TicketMaster::Provider
       @@allowed_states = ['new', 'open', 'resolved', 'hold', 'invalid']
       attr_accessor :prefix_options
       API = ::Lighthouse::Ticket
-
+      
       # Lighthouse limits us to a 100 ticket limit per page...
-      # might have to implement paging later...
+      # Since the paging sucks...we probably want to store this rather than do a call each time
       def self.search(project_id, options = {}, limit = 1000)
-        tickets = ::Lighthouse::Ticket.find(:all, :params => {:project_id => project_id, :limit => 100}).collect { |ticket| self.new ticket }
-        search_by_attribute(tickets, options, limit)
+        page = 1
+        tickets = ::Lighthouse::Ticket.find(:all, :params => {:project_id => project_id, :limit => 100, :page => page})
+        result = []
+        while tickets.length > 0 and page <= 3 #limit to page 3 since lighthouse is so slow...
+          result += tickets.collect { |ticket| self.new ticket }
+          page += 1
+          tickets = ::Lighthouse::Ticket.find(:all, :params => {:project_id => project_id, :limit => 100, :page => page})
+        end
+        search_by_attribute(result, options, limit)
       end
       
       # This is to get the ticket id
