@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ticketmaster-lighthouse}
-  s.version = "0.5.3"
+  s.version = "0.5.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Hong"]
@@ -23,7 +23,6 @@ Gem::Specification.new do |s|
      "README.md",
      "Rakefile",
      "VERSION",
-     "lib/api/monkey.rb",
      "lib/provider/comment.rb",
      "lib/provider/lighthouse.rb",
      "lib/provider/project.rb",
