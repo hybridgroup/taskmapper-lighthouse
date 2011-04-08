@@ -7,6 +7,9 @@ describe "Ticketmaster::Provider::Lighthouse::Ticket" do
     ActiveResource::HttpMock.respond_to do |mock|
       mock.get '/projects/54448.xml', headers, fixture_for('projects/54448'), 200
       mock.get '/projects/54448/tickets.xml', headers, fixture_for('tickets'), 200
+      1.upto(100) do |page|
+        mock.get "/projects/54448/tickets.xml?limit=100&page=#{page}", headers, fixture_for('tickets'), 200
+      end
       mock.get '/projects/54448/tickets/5.xml', headers, fixture_for('tickets/5'), 200
       mock.put '/projects/54448/tickets/5.xml', wheaders, '', 200
       mock.post '/projects/54448/tickets.xml', wheaders, fixture_for('tickets/create'), 200
