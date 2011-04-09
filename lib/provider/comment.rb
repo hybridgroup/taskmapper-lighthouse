@@ -58,11 +58,12 @@ module TicketMaster::Provider
 
       def initialize(ticket, id)
         @system_data ||= {}
+        return super(ticket) unless ticket.respond_to?('versions') and ticket.versions.respond_to?('[]')
         @system_data[:ticket] = @system_data[:client] = ticket
-        @system_data[:version] = ticket.versions[id] unless ticket.versions.nil?
-        self.project_id = ticket.prefix_options[:project_id] unless ticket.prefix_options.nil?
+        @system_data[:version] = ticket.versions[id] 
+        self.project_id = ticket.prefix_options[:project_id] 
         self.id = id
-        super(@system_data[:version].attributes) unless ticket.versions.nil?
+        super(@system_data[:version].attributes) 
       end
 
       # A custom searcher
