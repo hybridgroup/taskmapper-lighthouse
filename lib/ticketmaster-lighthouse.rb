@@ -3,6 +3,16 @@ require 'lighthouse-api'
 # Monkey Patch - remove when the lighthouse gem gets updated.
 # texel's changes got merged, but looks like a new gem didn't get released. ugh!
 module Lighthouse
+
+  class << self
+    def account=(value)
+      @account = value
+      resources.each do |resource|
+        update_site(resource)
+      end
+    end
+  end
+
   class Ticket
     protected
       def cleanup_tags(tags)
