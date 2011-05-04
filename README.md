@@ -5,6 +5,7 @@ This is a provider for [ticketmaster](http://ticketrb.com). It provides interope
 # Usage and Examples
 
 First we have to instantiate a new ticketmaster instance:
+
     lighthouse = TicketMaster.new(:lighthouse, {:subdomain => "rails"})
     lighthouse = TicketMaster.new(:lighthouse, {:username => "code", :password => "m4st3r!", :account => "ticketmaster"})
     lighthouse = TicketMaster.new(:lighthouse, {:token => "5ff546af3df4a3c02d3a719b0ff1c3fcc5351c97", :account => "lhdemo"})
