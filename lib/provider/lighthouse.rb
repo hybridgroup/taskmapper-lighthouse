@@ -24,7 +24,16 @@ module TicketMaster::Provider
         ::Lighthouse.authenticate(auth.username, auth.password)
       end
     end
-    
+
+    def valid?
+      begin
+        PROJECT_API.find(:first)
+        true
+      rescue
+        false
+      end
+    end
+
     # The projects
     #
     # We have to merge in the auth information because, due to the class-based authentication
@@ -34,13 +43,13 @@ module TicketMaster::Provider
       authorize
       super(*options)
     end
-    
+
     # The project
     def project(*options)
       authorize
       super(*options)
     end
-    
+
     # The tickets
     #
     # Due to the nature of lighthouse, we must have the project_id to pull tickets. You can
@@ -56,12 +65,12 @@ module TicketMaster::Provider
       authorize
       super(*options)
     end
-    
+
     # the ticket
     def ticket(*options)
       authorize
       super(*options)
     end
-    
+
   end
 end
