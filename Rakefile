@@ -12,8 +12,6 @@ begin
     gem.authors = ["Hong"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
     gem.add_dependency "ticketmaster", ">= 0.6.0"
-    gem.add_dependency "activesupport", ">= 2.3.2"
-    gem.add_dependency "activeresource", ">= 2.3.2"
     gem.add_dependency "lighthouse-api", "~> 2.0"
     gem.add_dependency "addressable", ">= 2.1.2"
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
