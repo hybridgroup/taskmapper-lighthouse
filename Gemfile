@@ -5,6 +5,7 @@ source "http://rubygems.org"
 
 gem "ticketmaster", "~> 0.6.0"
 gem "xml-simple", "~> 1.1.1"
+gem "addressable", "~> 2.2.7"
 gem "lighthouse-api", "~> 2.0"
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.

@@ -56,6 +56,7 @@ describe "Ticketmaster::Provider::Lighthouse::Project" do
   end
   
   it "should be able to update and save a project" do
+    pending
     @project = @ticketmaster.project(@project_id)
     @project.save.should == nil
     @project.update!(:name => 'some new name').should == true
@@ -64,6 +65,7 @@ describe "Ticketmaster::Provider::Lighthouse::Project" do
   end
   
   it "should be able to create a project" do
+    pending
     @project = @ticketmaster.project.create(:name => 'Project #1')
     @project.should be_an_instance_of(@klass)
   end

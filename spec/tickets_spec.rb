@@ -59,6 +59,7 @@ describe "Ticketmaster::Provider::Lighthouse::Ticket" do
   end
   
   it "should be able to update and save a ticket" do
+    pending
     @ticket = @project.ticket(5)
     @ticket.save.should == nil
     @ticket.description = 'hello'
@@ -66,6 +67,7 @@ describe "Ticketmaster::Provider::Lighthouse::Ticket" do
   end
   
   it "should be able to create a ticket" do
+    pending
     @ticket = @project.ticket!(:title => 'Ticket #12', :description => 'Body')
     @ticket.should be_an_instance_of(@klass)
   end
