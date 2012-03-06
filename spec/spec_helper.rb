@@ -4,11 +4,10 @@ require 'rubygems'
 require 'ticketmaster'
 require 'ticketmaster-lighthouse'
 require 'active_resource/http_mock'
-require 'spec'
-require 'spec/autorun'
+require 'rspec'
 
-Spec::Runner.configure do |config|
-  
+RSpec.configure do |config|
+  config.color_enabled = true
 end
 
 def fixture_for(name)
