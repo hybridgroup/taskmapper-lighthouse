@@ -6,7 +6,7 @@ describe "Ticketmaster::Provider::Lighthouse" do
     @ticketmaster = TicketMaster.new(:lighthouse, {:account => 'ticketmaster', :token => '000000'})
     headers = {'X-LighthouseToken' => '000000'}
     ActiveResource::HttpMock.respond_to do |mock|
-      mock.get '/projects.xml', headers, fixture_for('projects'), 200
+      mock.get '/projects.json', headers, fixture_for('projects'), 200
     end
   end
 

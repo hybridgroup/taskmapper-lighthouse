@@ -3,12 +3,12 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 describe "Ticketmaster::Provider::Lighthouse::Comment" do
   before(:all) do
     headers = {'X-LighthouseToken' => '000000'}
-    wheaders = headers.merge('Content-Type' => 'application/xml')
+    wheaders = headers.merge('Content-Type' => 'application/json')
     ActiveResource::HttpMock.respond_to do |mock|
-      mock.get '/projects/54448.xml', headers, fixture_for('projects/54448'), 200
-      mock.get '/projects/54448/tickets.xml', headers, fixture_for('tickets'), 200
-      mock.get '/projects/54448/tickets/2.xml', headers, fixture_for('tickets/2'), 200
-      mock.put '/projects/54448/tickets/2.xml', wheaders, '', 200
+      mock.get '/projects/54448.json', headers, fixture_for('projects/54448'), 200
+      mock.get '/projects/54448/tickets.json', headers, fixture_for('tickets'), 200
+      mock.get '/projects/54448/tickets/2.json', headers, fixture_for('tickets/2'), 200
+      mock.put '/projects/54448/tickets/2.json', wheaders, '', 200
     end
     @project_id = 54448
   end

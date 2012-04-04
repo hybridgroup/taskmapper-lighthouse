@@ -3,16 +3,16 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 describe "Ticketmaster::Provider::Lighthouse::Ticket" do
   before(:all) do
     headers = {'X-LighthouseToken' => '000000'}
-    wheaders = headers.merge('Content-Type' => 'application/xml')
+    wheaders = headers.merge('Content-Type' => 'application/json')
     ActiveResource::HttpMock.respond_to do |mock|
-      mock.get '/projects/54448.xml', headers, fixture_for('projects/54448'), 200
-      mock.get '/projects/54448/tickets.xml', headers, fixture_for('tickets'), 200
+      mock.get '/projects/54448.json', headers, fixture_for('projects/54448'), 200
+      mock.get '/projects/54448/tickets.json', headers, fixture_for('tickets'), 200
       1.upto(100) do |page|
-        mock.get "/projects/54448/tickets.xml?limit=100&page=#{page}", headers, fixture_for('tickets'), 200
+        mock.get "/projects/54448/tickets.json?limit=100&page=#{page}", headers, fixture_for('tickets'), 200
       end
-      mock.get '/projects/54448/tickets/5.xml', headers, fixture_for('tickets/5'), 200
-      mock.put '/projects/54448/tickets/5.xml', wheaders, '', 200
-      mock.post '/projects/54448/tickets.xml', wheaders, fixture_for('tickets/create'), 200
+      mock.get '/projects/54448/tickets/5.json', headers, fixture_for('tickets/5'), 200
+      mock.put '/projects/54448/tickets/5.json', wheaders, '', 200
+      mock.post '/projects/54448/tickets.json', wheaders, fixture_for('tickets/create'), 200
     end
     @project_id = 54448
   end
