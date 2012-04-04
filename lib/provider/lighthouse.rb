@@ -17,7 +17,7 @@ module TicketMaster::Provider
       if auth.account.nil? or (auth.token.nil? and (auth.username.nil? and auth.password.nil?))
         raise "Please provide at least an account (subdomain) and token or username and password)"
       end
-      ::Lighthouse::Base.format = :xml
+      ::Lighthouse::Base.format = :json
       ::Lighthouse.account = auth.account || auth.subdomain
       if auth.token
         ::Lighthouse.token = auth.token
