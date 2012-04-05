@@ -115,10 +115,6 @@ module TicketMaster::Provider
       
       # Gotta unset the body attribute...otherwise every save ends up using that body
       def save
-#        self.tag = @tags.reduce([]) do |mem, t|
-#          t = "\"#{t}\"" if t.include?(' ')
-#          mem << t
-#        end.join(' ') if @tags
         @system_data[:client].attributes.delete('versions')
         result = super
         body = nil
