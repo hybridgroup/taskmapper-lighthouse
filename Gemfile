@@ -3,7 +3,7 @@ source "http://rubygems.org"
 # Example:
 #   gem "activesupport", ">= 2.3.5"
 
-gem "ticketmaster", "0.6.10"
+gem "ticketmaster", "~> 0.7.0"
 gem "xml-simple", "~> 1.1"
 gem "addressable", "~> 2.2"
 gem "lighthouse-api", "~> 2.0"
