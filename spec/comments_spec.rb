@@ -62,4 +62,9 @@ describe "Ticketmaster::Provider::Lighthouse::Comment" do
     @comment = @ticket.comment!(:body => 'hello there boys and girls')
     @comment.should be_an_instance_of(@klass)
   end
+  
+  it "should notify 'Not supported' when trying to update a comment" do
+    comment = @ticket.comment(:number => @ticket.id)
+    comment.save.should == 'Not supported'
+  end
 end

@@ -80,6 +80,9 @@ module TicketMaster::Provider
         user_name
       end
 
+      def save
+        'Not supported'
+      end
     end
   end
 end
