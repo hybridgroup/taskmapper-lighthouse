@@ -1,6 +1,6 @@
-module TicketMaster::Provider
+module TaskMapper::Provider
   module Lighthouse
-    # The comment class for ticketmaster-lighthouse
+    # The comment class for taskmapper-lighthouse
     #
     # Due to the way lighthouse handles tickets, comments aren't really comments, but
     # versions of the ticket.
@@ -12,7 +12,7 @@ module TicketMaster::Provider
     # * updated_at
     # * ticket_id => number (read-only)
     # * project_id => (set by the initializer)
-    class Comment < TicketMaster::Provider::Base::Comment
+    class Comment < TaskMapper::Provider::Base::Comment
       API = ::Lighthouse::Ticket
       
       # A custom find_by_id

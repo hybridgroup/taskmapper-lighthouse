@@ -1,18 +1,18 @@
-module TicketMaster::Provider
-  # This is the Lighthouse Provider for ticketmaster
+module TaskMapper::Provider
+  # This is the Lighthouse Provider for taskmapper
   module Lighthouse
-    include TicketMaster::Provider::Base
+    include TaskMapper::Provider::Base
     PROJECT_API = ::Lighthouse::Project
     TICKET_API = ::Lighthouse::Ticket
     
-    # This is for cases when you want to instantiate using TicketMaster::Provider::Lighthouse.new(auth)
+    # This is for cases when you want to instantiate using TaskMapper::Provider::Lighthouse.new(auth)
     def self.new(auth = {})
-      TicketMaster.new(:lighthouse, auth)
+      TaskMapper.new(:lighthouse, auth)
     end
     
     # The authorize and initializer for this provider
     def authorize(auth = {})
-      @authentication ||= TicketMaster::Authenticator.new(auth)
+      @authentication ||= TaskMapper::Authenticator.new(auth)
       auth = @authentication
       if auth.account.nil? or (auth.token.nil? and (auth.username.nil? and auth.password.nil?))
         raise "Please provide at least an account (subdomain) and token or username and password)"
@@ -59,7 +59,7 @@ module TicketMaster::Provider
     #    .tickets(22)
     #    .tickets(:project_id => 22)
     # 
-    # To conform to ticketmaster's standard of returning all tickets on a call to this method
+    # To conform to taskmapper's standard of returning all tickets on a call to this method
     # without any parameters, if no parameters are passed, it will return all tickets for whatever
     # the first project is.
     def tickets(*options)

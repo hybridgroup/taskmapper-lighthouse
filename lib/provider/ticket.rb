@@ -1,6 +1,6 @@
-module TicketMaster::Provider
+module TaskMapper::Provider
   module Lighthouse
-    # Ticket class for ticketmaster-lighthouse
+    # Ticket class for taskmapper-lighthouse
     #
     # Due to the way Lighthouse stores tickets, we actually end up creating a new ticket version
     # every time we edit tickets. Their api FAQ states these attributes as the only editable ones(?):
@@ -12,7 +12,7 @@ module TicketMaster::Provider
     # * milestone-id - optional
     # * tag - space or comma delimited list of tags
     #
-    # We had to remap things a bit since lighthouse doesn't name things as ticketmaster specifies.
+    # We had to remap things a bit since lighthouse doesn't name things as taskmapper specifies.
     #
     # * id => number (read-only)
     # * status => state
@@ -26,7 +26,7 @@ module TicketMaster::Provider
     # * created_at
     # * updated_at
 
-    class Ticket < TicketMaster::Provider::Base::Ticket
+    class Ticket < TaskMapper::Provider::Base::Ticket
       @@allowed_states = ['new', 'open', 'resolved', 'hold', 'invalid']
       attr_accessor :prefix_options
       API = ::Lighthouse::Ticket

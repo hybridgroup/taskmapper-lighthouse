@@ -4,11 +4,11 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "ticketmaster-lighthouse"
-    gem.summary = %Q{Ticketmaster Provider for Lighthouse}
-    gem.description = %Q{Allows ticketmaster to interact with Lighthouse's issue tracking system.}
+    gem.name = "taskmapper-lighthouse"
+    gem.summary = %Q{TaskMapper Provider for Lighthouse}
+    gem.description = %Q{Allows taskmapper to interact with Lighthouse's issue tracking system.}
     gem.email = "hong.quach@abigfisch.com"
-    gem.homepage = "http://github.com/kiafaldorius/ticketmaster-lighthouse"
+    gem.homepage = "http://github.com/kiafaldorius/taskmapper-lighthouse"
     gem.authors = ["Hong"]
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
@@ -35,7 +35,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "ticketmaster-kanbanpad#{version}"
+  rdoc.title = "taskmapper-kanbanpad#{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

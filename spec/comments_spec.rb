@@ -1,6 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
-describe "Ticketmaster::Provider::Lighthouse::Comment" do
+describe TaskMapper::Provider::Lighthouse::Comment do
   before(:all) do
     headers = {'X-LighthouseToken' => '000000'}
     wheaders = headers.merge('Content-Type' => 'application/json')
@@ -14,10 +14,10 @@ describe "Ticketmaster::Provider::Lighthouse::Comment" do
   end
   
   before(:each) do
-    @ticketmaster = TicketMaster.new(:lighthouse, :account => 'ticketmaster', :token => '000000')
-    @project = @ticketmaster.project(@project_id)
+    @taskmapper = TaskMapper.new(:lighthouse, :account => 'taskmapper', :token => '000000')
+    @project = @taskmapper.project(@project_id)
     @ticket = @project.ticket(2)
-    @klass = TicketMaster::Provider::Lighthouse::Comment
+    @klass = TaskMapper::Provider::Lighthouse::Comment
   end
   
   it "should be able to load all comments" do

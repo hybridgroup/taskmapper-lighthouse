@@ -1,9 +1,9 @@
-module TicketMaster::Provider
+module TaskMapper::Provider
   module Lighthouse
-    # Project class for ticketmaster-lighthouse
+    # Project class for taskmapper-lighthouse
     # 
     # 
-    class Project < TicketMaster::Provider::Base::Project
+    class Project < TaskMapper::Provider::Base::Project
       attr_accessor :prefix_options
       API = ::Lighthouse::Project  
       # Delete this project

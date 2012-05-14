@@ -5,9 +5,9 @@
   <default-assigned-user-id type="integer" nil="true"></default-assigned-user-id>
   <default-milestone-id type="integer" nil="true"></default-milestone-id>
   <default-ticket-text nil="true"></default-ticket-text>
-  <description>This is a test project created in order to test the ticketmaster-lighthouse gem.</description>
+  <description>This is a test project created in order to test the taskmapper-lighthouse gem.</description>
   <description-html>&lt;div&gt;&lt;p&gt;This is a test project created in order to test the
-ticketmaster-lighthouse gem.&lt;/p&gt;&lt;/div&gt;</description-html>
+taskmapper-lighthouse gem.&lt;/p&gt;&lt;/div&gt;</description-html>
   <hidden type="boolean">false</hidden>
   <id type="integer">54448</id>
   <license nil="true"></license>

@@ -4,13 +4,13 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "ticketmaster-lighthouse"
+  s.name = "taskmapper-lighthouse"
   s.version = "0.8.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Hong"]
   s.date = "2012-04-11"
-  s.description = "Allows ticketmaster to interact with Lighthouse's issue tracking system."
+  s.description = "Allows taskmapper to interact with Lighthouse's issue tracking system."
   s.email = "hong.quach@abigfisch.com"
   s.extra_rdoc_files = [
     "LICENSE",
@@ -29,7 +29,7 @@ Gem::Specification.new do |s|
     "lib/provider/lighthouse.rb",
     "lib/provider/project.rb",
     "lib/provider/ticket.rb",
-    "lib/ticketmaster-lighthouse.rb",
+    "lib/taskmapper-lighthouse.rb",
     "spec/comments_spec.rb",
     "spec/fixtures/projects.json",
     "spec/fixtures/projects/54448.json",
@@ -46,20 +46,20 @@ Gem::Specification.new do |s|
     "spec/projects_spec.rb",
     "spec/spec.opts",
     "spec/spec_helper.rb",
-    "spec/ticketmaster-lighthouse_spec.rb",
+    "spec/taskmapper-lighthouse_spec.rb",
     "spec/tickets_spec.rb",
-    "ticketmaster-lighthouse.gemspec"
+    "taskmapper-lighthouse.gemspec"
   ]
-  s.homepage = "http://github.com/kiafaldorius/ticketmaster-lighthouse"
+  s.homepage = "http://github.com/kiafaldorius/taskmapper-lighthouse"
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.17"
-  s.summary = "Ticketmaster Provider for Lighthouse"
+  s.summary = "TaskMapper Provider for Lighthouse"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<ticketmaster>, ["= 0.6.10"])
+      s.add_runtime_dependency(%q<taskmapper>, ["= 0.6.10"])
       s.add_runtime_dependency(%q<xml-simple>, ["~> 1.1"])
       s.add_runtime_dependency(%q<addressable>, ["~> 2.2"])
       s.add_runtime_dependency(%q<lighthouse-api>, ["~> 2.0"])
@@ -69,7 +69,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<simplecov>, ["~> 0.5"])
       s.add_development_dependency(%q<rcov>, ["~> 1.0"])
     else
-      s.add_dependency(%q<ticketmaster>, ["= 0.6.10"])
+      s.add_dependency(%q<taskmapper>, ["= 0.6.10"])
       s.add_dependency(%q<xml-simple>, ["~> 1.1"])
       s.add_dependency(%q<addressable>, ["~> 2.2"])
       s.add_dependency(%q<lighthouse-api>, ["~> 2.0"])
@@ -80,7 +80,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<rcov>, ["~> 1.0"])
     end
   else
-    s.add_dependency(%q<ticketmaster>, ["= 0.6.10"])
+    s.add_dependency(%q<taskmapper>, ["= 0.6.10"])
     s.add_dependency(%q<xml-simple>, ["~> 1.1"])
     s.add_dependency(%q<addressable>, ["~> 2.2"])
     s.add_dependency(%q<lighthouse-api>, ["~> 2.0"])
