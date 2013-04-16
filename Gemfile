@@ -3,7 +3,7 @@ source "http://rubygems.org"
 # Example:
 #   gem "activesupport", ">= 2.3.5"
 
-gem "taskmapper", "~> 0.8"
+gem "taskmapper"
 gem "xml-simple", "~> 1.1"
 gem "addressable", "~> 2.2"
 gem "lighthouse-api", "~> 2.0"
